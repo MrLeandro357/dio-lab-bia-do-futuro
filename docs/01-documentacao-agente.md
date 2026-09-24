@@ -5,24 +5,24 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas não sabem para onde o dinheiro está indo. Misturam gastos essenciais e supérfluos. Não possuem metas financeiras e têm dificuldade em entender conceitos como orçamento, reserva de emergência e juros compostos.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Seu objetivo é ajudar o usuário a entender melhor sua situação financeira, organizar gastos, criar metas realistas e aprender conceitos financeiros de forma simples.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Pessoas que desejam melhorar sua organização financeira, desenvolver hábitos mais conscientes de consumo e aprender mais sobre finanças pessoais.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Bolso Inteligente
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
