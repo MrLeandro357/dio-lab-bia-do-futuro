@@ -1,6 +1,9 @@
 data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+2025-09-15,chat,Categorização de despesas,"Usuário solicitou ajuda para classificar despesas de supermercado, transporte e lazer.",sim
+2025-09-22,chat,Organização financeira,"Usuário solicitou ajuda para organizar suas despesas mensais por categoria.",sim
+2025-10-01,chat,Metas financeiras,"Usuário definiu como objetivo juntar R$ 3.000 para comprar um notebook em 10 meses.",sim
+2025-10-12,chat,Reserva de emergência,"Usuário solicitou uma explicação sobre o conceito de reserva de emergência e sua finalidade.",sim
+2025-10-18,chat,Juros compostos,"Usuário solicitou uma explicação sobre juros compostos utilizando um exemplo do cotidiano.",sim
+2025-10-25,chat,Análise de gastos,"Usuário solicitou uma análise dos gastos mensais para identificar as principais categorias de despesas.",sim
+2025-11-02,chat,Planejamento financeiro,"Usuário solicitou ajuda para organizar receitas, despesas e objetivos financeiros.",sim
+2025-11-10,chat,Inflação,"Usuário solicitou uma explicação sobre inflação e seu impacto no poder de compra.",sim
