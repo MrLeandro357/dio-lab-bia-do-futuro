@@ -50,7 +50,7 @@ if __name__ == "__main__":
     print("   Agente de Educação Financeira")
     print("===================================")
     print()
-    print("Dados carregados com sucesso!")
+    print("Dados carregados com sucesso!!!")
     print()
 
     print(f"Categorias: {len(dados['categorias'])}")
