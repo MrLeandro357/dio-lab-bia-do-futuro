@@ -6,11 +6,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_usuario.json` | JSON | Personalizar recomendações |
-| `conceitos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-| `categorias_despesas.json` | JSON | 
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores e acompanhar o histórico de atendimentos |
+| `perfil_usuario.json` | JSON | Personalizar análises, metas e orientações de acordo com as informações do usuário |
+| `conceitos_financeiros.json` | JSON | Consultar e explicar conceitos de educação financeira de forma simples e didática |
+| `transacoes.csv` | CSV | Analisar receitas, despesas, categorias e padrões de gastos informados pelo usuário |
+| `categorias_despesas.json` | JSON | Classificar e organizar despesas de acordo com categorias financeiras predefinidas |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
