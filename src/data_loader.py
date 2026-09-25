@@ -1,17 +1,18 @@
 from pathlib import Path
 import json
-import csv
+import pandas as pd
 
 
-# Localização da pasta data/
+# Localização da raiz do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Pasta onde estão os dados
 DATA_DIR = BASE_DIR / "data"
 
 
 def carregar_json(nome_arquivo):
-    """
-    Carrega um arquivo JSON da pasta data/.
-    """
+    """Carrega um arquivo JSON da pasta data."""
+
     caminho = DATA_DIR / nome_arquivo
 
     with open(caminho, "r", encoding="utf-8") as arquivo:
@@ -19,19 +20,15 @@ def carregar_json(nome_arquivo):
 
 
 def carregar_csv(nome_arquivo):
-    """
-    Carrega um arquivo CSV da pasta data/.
-    """
+    """Carrega um arquivo CSV da pasta data."""
+
     caminho = DATA_DIR / nome_arquivo
 
-    with open(caminho, "r", encoding="utf-8-sig") as arquivo:
-        return list(csv.DictReader(arquivo))
+    return pd.read_csv(caminho)
 
 
 def carregar_dados():
-    """
-    Carrega todos os dados utilizados pelo Bolso Inteligente.
-    """
+    """Carrega todos os dados utilizados pelo Bolso Inteligente."""
 
     dados = {
         "categorias": carregar_json("categorias_despesas.json"),
@@ -45,8 +42,14 @@ def carregar_dados():
 
 
 if __name__ == "__main__":
+
     dados = carregar_dados()
 
+    print("===================================")
+    print("      💰 BOLSO INTELIGENTE")
+    print("   Agente de Educação Financeira")
+    print("===================================")
+    print()
     print("Dados carregados com sucesso!")
     print()
 
@@ -57,8 +60,10 @@ if __name__ == "__main__":
 
     print()
     print("Perfil:")
-    print(dados["perfil"]["nome"])
+    print(f"Nome: {dados['perfil']['nome']}")
+    print(f"Renda mensal: R$ {dados['perfil']['renda_mensal']:.2f}")
 
     print()
-    print("Primeira transação:")
-    print(dados["transacoes"][0])
+    print("Primeiras transações:")
+
+    print(dados["transacoes"].head())
