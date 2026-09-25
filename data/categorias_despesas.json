@@ -1,23 +1,42 @@
-{
-  "alimentacao": [
-    "supermercado",
-    "mercado",
-    "restaurante",
-    "padaria"
-  ],
-  "transporte": [
-    "uber",
-    "combustivel",
-    "onibus"
-  ],
-  "saude": [
-    "farmacia",
-    "consulta",
-    "academia"
-  ],
-  "moradia": [
-    "aluguel",
-    "condominio",
-    "energia"
-  ]
-}
+[
+  {
+    "categoria": "Moradia",
+    "descricao": "Despesas relacionadas à residência, como aluguel, condomínio, financiamento habitacional, manutenção e impostos do imóvel."
+  },
+  {
+    "categoria": "Alimentação",
+    "descricao": "Despesas relacionadas à alimentação, como supermercado, feira, restaurantes, lanchonetes, delivery e refeições."
+  },
+  {
+    "categoria": "Transporte",
+    "descricao": "Despesas relacionadas à locomoção, como combustível, transporte público, aplicativos de transporte, estacionamento, manutenção e pedágios."
+  },
+  {
+    "categoria": "Saúde",
+    "descricao": "Despesas relacionadas à saúde, como consultas médicas, exames, medicamentos, farmácia, planos de saúde e tratamentos."
+  },
+  {
+    "categoria": "Educação",
+    "descricao": "Despesas relacionadas à educação e capacitação, como cursos, mensalidades, livros, materiais escolares e plataformas de ensino."
+  },
+  {
+    "categoria": "Lazer",
+    "descricao": "Despesas relacionadas a entretenimento e atividades de lazer, como cinema, viagens, jogos, streaming, eventos e atividades recreativas."
+  },
+  {
+    "categoria": "Contas e Serviços",
+    "descricao": "Despesas recorrentes relacionadas a serviços e contas, como energia elétrica, água, gás, internet, telefone e outros serviços essenciais."
+  },
+  {
+    "categoria": "Compras",
+    "descricao": "Despesas com aquisição de produtos e bens pessoais que não se enquadram em outras categorias, como roupas, eletrônicos, acessórios e itens diversos."
+  },
+  {
+    "categoria": "Investimentos",
+    "descricao": "Valores destinados à formação de patrimônio ou aplicação financeira. O agente deve apenas registrar e classificar essas movimentações, sem recomendar produtos ou investimentos específicos."
+  },
+  {
+    "categoria": "Outros",
+    "descricao": "Despesas que não podem ser classificadas adequadamente nas demais categorias disponíveis."
+  }
+]
