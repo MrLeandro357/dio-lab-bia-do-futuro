@@ -1,0 +1,23 @@
+{
+  "alimentacao": [
+    "supermercado",
+    "mercado",
+    "restaurante",
+    "padaria"
+  ],
+  "transporte": [
+    "uber",
+    "combustivel",
+    "onibus"
+  ],
+  "saude": [
+    "farmacia",
+    "consulta",
+    "academia"
+  ],
+  "moradia": [
+    "aluguel",
+    "condominio",
+    "energia"
+  ]
+}
