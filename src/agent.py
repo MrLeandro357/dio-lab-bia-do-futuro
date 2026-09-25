@@ -25,6 +25,91 @@ from prompts import SYSTEM_PROMPT, criar_prompt_usuario
 # Modelo utilizado pelo agente
 MODELO = "qwen3:4b"
 
+def identificar_intencao(pergunta):
+    """
+    Identifica de forma simples a intenção da pergunta.
+    """
+
+    pergunta = pergunta.lower().strip()
+
+    if "quanto" in pergunta and "aliment" in pergunta:
+        return "gasto_categoria"
+
+    if "quanto" in pergunta and "gasto" in pergunta:
+        return "total_gastos"
+
+    if "saldo" in pergunta:
+        return "saldo"
+
+    if "categoria" in pergunta and (
+        "gasto" in pergunta or "despesa" in pergunta
+    ):
+        return "gastos_categoria"
+
+    if "meta" in pergunta or "juntar" in pergunta:
+        return "meta"
+
+    if "juros" in pergunta:
+        return "educacao"
+
+    if "inflação" in pergunta or "inflacao" in pergunta:
+        return "educacao"
+
+    return "geral"
+
+def executar_calculo(intencao, transacoes):
+    """
+    Executa o cálculo correspondente à intenção identificada.
+    """
+
+    if intencao == "gasto_categoria":
+
+        valor = calcular_gasto_categoria(
+            transacoes,
+            "alimentacao"
+        )
+
+        return (
+            f"O gasto com alimentação foi de "
+            f"R$ {valor:.2f}."
+        )
+
+    if intencao == "total_gastos":
+
+        valor = calcular_total_gastos(transacoes)
+
+        return (
+            f"O total de gastos registrados foi de "
+            f"R$ {valor:.2f}."
+        )
+
+    if intencao == "saldo":
+
+        valor = calcular_saldo(transacoes)
+
+        return (
+            f"O saldo calculado com base nas transações "
+            f"registradas é de R$ {valor:.2f}."
+        )
+
+    if intencao == "gastos_categoria":
+
+        gastos = calcular_gastos_por_categoria(
+            transacoes
+        )
+
+        resultado = "Gastos por categoria:\n"
+
+        for categoria, valor in gastos.items():
+
+            resultado += (
+                f"- {categoria.title()}: "
+                f"R$ {valor:.2f}\n"
+            )
+
+        return resultado
+
+    return None
 
 class BolsoInteligente:
     """
@@ -109,10 +194,30 @@ GASTOS POR CATEGORIA
 
     def responder(self, pergunta):
         """
-        Envia uma pergunta ao modelo de IA.
+        Processa a pergunta do usuário e decide
+        se deve utilizar um cálculo ou o modelo de IA.
         """
 
-        contexto = self.criar_contexto_financeiro()
+        intencao = identificar_intencao(pergunta)
+
+        resultado = executar_calculo(
+            intencao,
+            self.transacoes
+        )
+
+        # Se Python conseguiu calcular,
+        # envia o resultado para o modelo explicar.
+        if resultado:
+
+            contexto = f"""
+    RESULTADO CALCULADO PELO SISTEMA:
+
+    {resultado}
+    """
+
+        else:
+
+            contexto = self.criar_contexto_financeiro()
 
         prompt = criar_prompt_usuario(
             pergunta,
@@ -137,25 +242,33 @@ GASTOS POR CATEGORIA
 
 
 if __name__ == "__main__":
-
     print("===================================")
     print("      💰 BOLSO INTELIGENTE")
     print("       Agente de IA Financeira")
     print("===================================")
     print()
+    print("Agente inicializado com sucesso!")
+    print()
+    print("Digite sua pergunta financeira.")
+    print("Digite 'sair' para encerrar.")
+    print()
 
     agente = BolsoInteligente()
 
-    print("Agente inicializado com sucesso!")
-    print()
+    while True:
+        pergunta = input("Você: ").strip()
 
-    pergunta = "Quanto gastei com alimentação?"
+        if pergunta.lower() == "sair":
+            print()
+            print("Bolso Inteligente: Até logo! 👋")
+            break
 
-    print(f"Usuário: {pergunta}")
-    print()
+        if not pergunta:
+            continue
 
-    resposta = agente.responder(pergunta)
+        print()
+        resposta = agente.responder(pergunta)
 
-    print("Bolso Inteligente:")
-    print()
-    print(resposta)
+        print("Bolso Inteligente:")
+        print(resposta)
+        print()
