@@ -1,0 +1,34 @@
+[
+  {
+    "titulo": "Orçamento Pessoal",
+    "descricao": "Planejamento das receitas e despesas para acompanhar como o dinheiro é utilizado."
+  },
+  {
+    "titulo": "Controle de Despesas",
+    "descricao": "Registro e acompanhamento dos gastos para facilitar a organização financeira."
+  },
+  {
+    "titulo": "Reserva de Emergência",
+    "descricao": "Valor reservado para situações inesperadas, como despesas emergenciais ou imprevistos."
+  },
+  {
+    "titulo": "Juros Simples",
+    "descricao": "Forma de cálculo em que os juros são aplicados sobre o valor principal durante o período considerado."
+  },
+  {
+    "titulo": "Juros Compostos",
+    "descricao": "Forma de cálculo em que os juros são incorporados ao valor acumulado, fazendo com que novos juros sejam calculados sobre esse montante."
+  },
+  {
+    "titulo": "Inflação",
+    "descricao": "Aumento geral dos preços de bens e serviços ao longo do tempo, reduzindo o poder de compra do dinheiro."
+  },
+  {
+    "titulo": "Metas Financeiras",
+    "descricao": "Objetivos financeiros definidos com valor e prazo para facilitar o planejamento e o acompanhamento do progresso."
+  },
+  {
+    "titulo": "Planejamento Financeiro",
+    "descricao": "Processo de organizar receitas, despesas, objetivos e prioridades para melhorar a utilização dos recursos financeiros."
+  }
+]
